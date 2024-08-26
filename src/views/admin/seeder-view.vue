@@ -3,6 +3,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import { useFirebaseStorage, useFirestore } from 'vuefire';
 import { products } from '../../data';
+import { RouterLink } from 'vue-router'
 
 const storage = useFirebaseStorage()
 const db = useFirestore()
@@ -60,7 +61,7 @@ const handleSubmit = (data) => {
 
 <template>
   <div class="mt-10">
-    <Link to="products"> Back </Link>
+    <RouterLink to="products"> Back </RouterLink>
 
     <h1 class="text-4xl my-10 font-extrabold">Seeder</h1>
 
