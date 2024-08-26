@@ -21,9 +21,6 @@ const productsStore = useProductsStore()
 const onSubmit = async (data) => {
   const { image, ...rest } = data
 
-
-  console.log(rest)
-
   try {
     await productsStore.createProduct({
       ...rest,
